@@ -45,10 +45,10 @@ RegRead, DarkStatus, % RootKey, % SubKey, SystemUsesLightTheme
 
 if (DarkStatus = 1) {
     RegWrite, REG_DWORD, % RootKey, % SubKey, SystemUsesLightTheme, 0 
-    RegWrite, REG_DWORD, % RootKey, % SubKey, AppsUsesLightTheme, 0 
+    RegWrite, REG_DWORD, % RootKey, % SubKey, AppsUseLightTheme, 0 
 } else { 
     RegWrite, REG_DWORD, % RootKey, % SubKey, SystemUsesLightTheme, 1
-    RegWrite, REG_DWORD, % RootKey, % SubKey, AppsUsesLightTheme, 1
+    RegWrite, REG_DWORD, % RootKey, % SubKey, AppsUseLightTheme, 1
 }
 Send !+d
 return
