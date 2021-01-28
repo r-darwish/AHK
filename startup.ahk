@@ -14,9 +14,7 @@ Run, http://www.bing.com/search?q=%clipboard%
 return
 
 ; Run Topgrade
-CapsLock & Up::
-Run topgrade.exe --keep
-return
+CapsLock & Up::Run topgrade.exe --keep
 
 ; Run OnTopReplica
 CapsLock & r::
@@ -25,9 +23,7 @@ Run, %A_AppData%\..\Local\OnTopReplica\OnTopReplica.exe --windowId=%CurrentHwnd%
 return
 
 ; Sleep
-#+s::
-DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
-return
+#+s::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 
 ; Center window
 #c::
@@ -52,3 +48,9 @@ if (DarkStatus = 1) {
 }
 Send !+d
 return
+
+; Process hacker
+^Esc::Run, "C:\Program Files\Process Hacker 2\ProcessHacker.exe"
+
+; Remap Alt+Backspace to Ctrl+Backspace
+!BackSpace::Send ^{BackSpace}
