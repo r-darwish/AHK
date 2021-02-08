@@ -56,4 +56,4 @@ return
 !BackSpace::Send ^{BackSpace}
 
 ; Run (or switch) steam to big picture mode
-CapsLock & p::Run  "steam://open/bigpicture"
+CapsLock & p::Run "steam://open/bigpicture"
