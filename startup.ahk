@@ -3,9 +3,6 @@
 #SingleInstance force
 SendMode Input
 
-; Disable CapsLock
-SetCapsLockState, AlwaysOff
-
 ; Search the selected text
 #s::
 Send, ^c
