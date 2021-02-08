@@ -34,7 +34,7 @@ CapsLock & d::
 RootKey = HKEY_CURRENT_USER
 SubKey  = SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize
 
-RegRead, DarkStatus, % RootKey, % SubKey, SystemUsesLightTheme
+RegRead, DarkStatus, % RootKey, % SubKey, AppsUseLightTheme
 
 if (DarkStatus = 1) {
     RegWrite, REG_DWORD, % RootKey, % SubKey, SystemUsesLightTheme, 0 
