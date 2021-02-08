@@ -54,3 +54,6 @@ return
 
 ; Remap Alt+Backspace to Ctrl+Backspace
 !BackSpace::Send ^{BackSpace}
+
+; Run (or switch) steam to big picture mode
+CapsLock & p::Run  "steam://open/bigpicture"
