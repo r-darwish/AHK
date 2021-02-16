@@ -16,7 +16,13 @@ CapsLock & Up::Run topgrade.exe --keep
 ; Run OnTopReplica
 CapsLock & r::
 WinGet, CurrentHwnd, ID, A
-Run, %A_AppData%\..\Local\OnTopReplica\OnTopReplica.exe --windowId=%CurrentHwnd% --screenPosition=BR
+GetKeyState, state, Alt
+if (state = "D") {
+    position := "TR"
+} else {
+    position := "BR"
+}
+Run, %A_AppData%\..\Local\OnTopReplica\OnTopReplica.exe --windowId=%CurrentHwnd% --opacity=127 --screenPosition=%position%
 return
 
 ; Sleep
