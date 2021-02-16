@@ -7,7 +7,7 @@ SendMode Input
 #s::
 Send, ^c
 Sleep 50
-Run, http://www.bing.com/search?q=%clipboard%
+Run, http://www.duckduckgo.com/?q=%clipboard%
 return
 
 ; Run Topgrade
