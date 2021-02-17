@@ -16,13 +16,19 @@ CapsLock & Up::Run topgrade.exe --keep
 ; Run OnTopReplica
 CapsLock & r::
 WinGet, CurrentHwnd, ID, A
-GetKeyState, state, Alt
-if (state = "D") {
-    position := "TR"
+GetKeyState, altState, Alt
+GetKeyState, shiftState, Shift
+
+if (shiftState = "D") {
+    WinClose, OnTopReplica
 } else {
-    position := "BR"
+    if (altState = "D") {
+        position := "TR"
+    } else {
+        position := "BR"
+    }
+    Run, %A_AppData%\..\Local\OnTopReplica\OnTopReplica.exe --windowId=%CurrentHwnd% --opacity=127 --screenPosition=%position% --chromeOff
 }
-Run, %A_AppData%\..\Local\OnTopReplica\OnTopReplica.exe --windowId=%CurrentHwnd% --opacity=127 --screenPosition=%position%
 return
 
 ; Sleep
