@@ -32,7 +32,7 @@ if (shiftState = "D") {
 return
 
 ; Sleep
-#+s::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+Caps Lock & s::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 
 ; Center window
 #c::
