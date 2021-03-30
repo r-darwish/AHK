@@ -27,7 +27,7 @@ if (shiftState = "D") {
     } else {
         position := "BR"
     }
-    Run, %A_AppData%\..\Local\OnTopReplica\OnTopReplica.exe --windowId=%CurrentHwnd% --opacity=127 --screenPosition=%position% --chromeOff
+    Run, %A_AppData%\..\Local\OnTopReplica\OnTopReplica.exe --windowId=%CurrentHwnd% --opacity=200 --screenPosition=%position%
 }
 return
 
